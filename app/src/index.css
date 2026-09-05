@@ -1,0 +1,47 @@
+@import "tailwindcss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "space-mono-regular";
+    src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+@font-face {
+    font-family: "space-mono-bold";
+    src: url("./assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+}
+@font-face {
+    font-family: "Anton";
+    src: url("./assets/fonts/Anton/Anton-Regular.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Inter-bold";
+    src: url("./assets/fonts/Inter/static/Inter_18pt-Bold.ttf");
+}
+body{
+    font-size: clamp(14px,16px,18px);
+    background-color: #FFFFFF;
+}
+
+li{
+    font-family: "space-mono-regular";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+::selection{
+    color: #daea49;
+    background-color: #000;
+}
+::-moz-selection{
+    color: #daea49;
+    background-color: #000;
+}

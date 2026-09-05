@@ -1,0 +1,106 @@
+.merchandise-component{
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding-block: 64px;
+    padding-inline: 48px;
+    border-top-width: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    overflow: hidden;
+}
+.merchandise-component .merchandise-component-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+}
+.merchandise-component .merchandise-component-header .merchandise-component-header-left{
+    font-family: "Anton";
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0.025em;
+    color: #000000;
+}
+.merchandise-component .merchandise-component-header .merchandise-component-header-right{
+    perspective: 500px;
+}
+.merchandise-component .merchandise-component-header .merchandise-component-header-right h5{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family:"Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.merchandise-component .merchandise-component-header .merchandise-component-header-right h5:hover{
+    cursor: pointer;
+    transform: translateZ(50px);
+    transition: 0.3s ease;
+    text-decoration: underline;
+}
+.merchandise-component .merchandise-component-divider{
+    height: 1px;
+    width: 100%;
+    background-color: #E5E7EB;
+}
+.merchandise-component .merchandise-component-merch{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0,1fr));
+    column-gap: 18px;
+    row-gap: 32px;
+    flex-wrap: wrap;
+}
+.merchandise-component .merchandise-component-merch .merch{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-img{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    perspective: 500px;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-img img{
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: opacity 150ms ease;
+    transition-duration: 500ms;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-img img:hover{
+    cursor: pointer;
+    transform: translateZ(10px);
+    transition: 0.3s ease;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-title h3{
+    font-family: "Inter-bold",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-title h3:hover{
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: underline;
+    text-decoration-color: #D1D5DB;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-price{
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #000000;
+}
+.merchandise-component .merchandise-component-merch .merch .merch-price:hover{
+    cursor: pointer;
+}

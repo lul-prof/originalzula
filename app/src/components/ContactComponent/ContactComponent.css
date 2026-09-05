@@ -1,0 +1,173 @@
+.contact{
+    width: 100%;
+    background-color: #F4F4F5;
+    color: #000;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 48px;
+    border-top-width: 1px;
+    border-color: #C4C4C4;
+}
+.contact .contact-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+}
+.contact .contact-left .contact-left-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+.contact .contact-left .contact-left-top .contact-left-top-left h1{
+    font-family: "Anton";
+    font-size: 96px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    user-select: none;
+}
+.contact .contact-left .contact-left-top .contact-left-top-right{
+    display: flex;
+}
+.contact .contact-left .contact-left-top .contact-left-top-right img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0.2;
+}
+.contact .contact-left .contact-left-mid{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.contact .contact-left .contact-left-mid h5{
+    font-family: "Space-mono-regular";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+.contact .contact-left .contact-left-mid h4{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Inter",sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+.contact .contact-left .contact-left-separator{
+    height: 1.5px;
+    width: 100%;
+    background-color: #E5E7EB;
+}
+.contact .contact-left .contact-left-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.contact .contact-left .contact-left-bottom h5{
+    font-family: "Space-mono-regular";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+.contact .contact-left .contact-left-bottom ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+    list-style: none;
+}
+.contact .contact-left .contact-left-bottom ul li{
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "space-mono-bold";
+}
+.contact .contact-right{
+    background-color: #FFFFFF;
+    padding: 48px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    border-width: 1px;
+}
+.contact .contact-right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.contact .contact-right form .form-class{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact .contact-right form .form-class input{
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 0;
+    border-radius: 12px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    outline: 0;
+}
+.contact .contact-right form .form-class input::placeholder{
+    font-family: "space-mono-regular";
+}
+.contact .contact-right form .form-class textarea{
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 0;
+    border-radius: 12px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    outline: 0;
+}
+.contact .contact-right form .form-class textarea::placeholder{
+    font-family: "space-mono-regular";
+}
+.contact .contact-right form .form-class label{
+    font-family: "space-mono-bold";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.contact .contact-right form .form-class-small{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    flex-wrap: wrap;
+}   
+.contact .contact-right form .form-btn button{
+    background-color: #000;
+    width: 100%;
+    border-radius: 12px;
+    outline: 0;
+    border: 0;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    justify-content: center;
+    font-family: "space-mono-bold";
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-block: 12px;
+}
+.contact .contact-right form .form-btn button:hover{
+    background-color: #27272A;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
