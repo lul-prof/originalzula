@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     background-color: #FFFFFF;
 }
 .navbar .navbar-center h1{
@@ -70,4 +70,92 @@
     transition: 0.3s ease;
     transform: translateZ(50px);
     cursor: pointer;
+}
+.navbar .navbar-right .navbar-right-menu{
+    display: none;
+}
+.sidemenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #000000;
+    color:#FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+.sidemenu .sidemenu-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom-width: 1px;
+    padding: 16px 32px;
+}
+.sidemenu .sidemenu-top .sidemenu-top-left h2{
+    font-family: "space-mono-bold";
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+.sidemenu .sidemenu-top .sidemenu-top-right{
+    perspective: 500px;
+}
+.sidemenu .sidemenu-top .sidemenu-top-right .close-icon:hover{
+    transform: translateZ(100px);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.sidemenu .sidemenu-mid ul{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+}
+.sidemenu .sidemenu-mid ul li{
+    font-family: "Inter-bold",sans-serif;
+    color: #FFFFFF;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+}
+.sidemenu .sidemenu-mid ul li:hover{
+    color: #daea49;
+    transition:color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.sidemenu .sidemenu-bottom{
+    border-top-width: 1px;
+    padding: 16px 32px;
+    text-align: center;
+    perspective: 100px;
+}
+.sidemenu .sidemenu-bottom h3{
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 0.025em;
+    font-weight: 500;
+}
+.sidemenu .sidemenu-bottom h3:hover{
+    cursor: pointer;
+    transform: translateZ(5px);
+
+}
+
+@media (max-width:769px) {
+.navbar .navbar-right .navbar-right-menu{
+    display: block;
+}
 }

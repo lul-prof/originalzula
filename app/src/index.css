@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 @font-face {
     font-family: "space-mono-regular";
     src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
@@ -22,6 +21,10 @@
     src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
 }
 @font-face {
+    font-family: "Inter-regualar";
+    src: url("./assets/fonts/Inter/static/Inter_18pt-Light.ttf");
+}
+@font-face {
     font-family: "Inter-bold";
     src: url("./assets/fonts/Inter/static/Inter_18pt-Bold.ttf");
 }
@@ -29,14 +32,12 @@ body{
     font-size: clamp(14px,16px,18px);
     background-color: #FFFFFF;
 }
-
 li{
     font-family: "space-mono-regular";
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
 }
-
 ::selection{
     color: #daea49;
     background-color: #000;
@@ -44,4 +45,23 @@ li{
 ::-moz-selection{
     color: #daea49;
     background-color: #000;
+}
+*::-webkit-scrollbar {
+    width: 10px; 
+    height: 0;
+}
+*::-webkit-scrollbar-track { 
+    background-color: #E9E9E9; 
+}
+*::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+*::-webkit-scrollbar-track:horizontal { 
+    background-color: #E9E9E9; 
+}
+*::-webkit-scrollbar-thumb:horizontal{
+    background: #100D1A;
+    border-radius: 10px;
 }

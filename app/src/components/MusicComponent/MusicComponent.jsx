@@ -23,7 +23,7 @@ const MusicComponent = () => {
             <h2>MUSIC <span>CATALOGUE</span></h2>
           </div>
           <div className="music-component-header-right">
-            <FaMusic size={40} className='grayscale brightness-0 animate-bounce'/>
+            <FaMusic size={40} color='#d1d5db' className='animate-bounce'/>
           </div>
        </div>
        {/*-----------------------------------*/}

@@ -3,6 +3,7 @@ import './MerchandiseComponent.css'
 import { merch } from '../../assets/images/merch/merch'
 import { useContext } from 'react'
 import { ShopContext } from '../../context/ShopContext'
+import {Link} from 'react-router-dom'
 
 const MerchandiseComponent = () => {
     const {currency}=useContext(ShopContext)
@@ -15,7 +16,9 @@ const MerchandiseComponent = () => {
                     <h2>MERCH</h2>
                 </div> 
                 <div className="merchandise-component-header-right">
-                    <h5>SHOP ALL <FaArrowRight/></h5>
+                    <Link to={'/merchandise'}>
+                        <h5>SHOP ALL <FaArrowRight/></h5>
+                    </Link>
                 </div>
             </div>
             {/*---------------------------------------*/}
@@ -26,7 +29,9 @@ const MerchandiseComponent = () => {
             <div className="merchandise-component-merch ">
                 {
                     merch.map((m)=>(
+                    m.featured?
                         <div key={m._id} className="merch">
+                            <Link to={`/merchandise/${m._id}`}>
                             <div className="merch-img">
                                 <img  src={m.image[0]} alt="merchImage" />
                             </div>
@@ -36,9 +41,12 @@ const MerchandiseComponent = () => {
                             <div className="merch-price">
                                 <h4>{currency} {m?.price.toLocaleString()}</h4>
                             </div>
+                            </Link>
                         </div>
+                        :
+                        <></>
                     ))
-                }
+            }
             </div>
         </div>
     </>

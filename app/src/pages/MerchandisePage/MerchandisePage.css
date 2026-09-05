@@ -1,0 +1,174 @@
+.merchandise{
+    background-color: #FFFFFF;
+    color: #000000;
+    min-height: 100vh;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-inline: 48px;
+}
+.merchandise .merchandise-links{
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    font-family: "Inter-bold",sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+.merchandise .merchandise-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 16px;
+}
+.merchandise .merchandise-header .merchandise-header-left h1{
+    font-family: "Anton";
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.merchandise .merchandise-header .merchandise-header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.merchandise .merchandise-header .merchandise-header-right{
+    font-family: "Space-mono-regular";
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    line-height: 16px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.merchandise .merchandise-header .merchandise-header-right select{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #000000;
+    padding: 3px;
+    cursor: pointer;
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 16px;
+}
+.merchandise .merchandise-body{
+    display: flex;
+    flex-direction:row;
+    gap: 48px;
+}
+.merchandise .merchandise-body .merchandise-body-left{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 24px;
+    height:100%;
+}
+.merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-header h2{
+    font-family: "Anton";
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 16px;
+}
+.merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-categories ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-categories ul li{
+    color: #9CA3AF;
+    font-family: "Inter-regular";
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    line-height: 20px;
+}
+.merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-categories ul li:hover{
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 18px;
+}
+.merchandise .merchandise-body .merchandise-body-right{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    column-gap: 24px;
+    row-gap: 32px;
+    margin-bottom: 64px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel:hover{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    perspective: 500px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image img{
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image img:hover{
+    cursor: pointer;
+    transform: translateZ(50px);
+    transition: 0.3s ease-in-out;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-details h3{
+    font-family: "Inter",sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-details h4{
+    font-family: "Inter",sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.25rem;
+    color: #000000;
+
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-btn button{
+    text-transform: uppercase;
+    font-family: "Inter",sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-inline: 40px;
+    padding-block: 10px;
+    border-radius: 100px;
+    letter-spacing: 0.15em;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-btn button:hover{
+    background-color: #daea49;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
