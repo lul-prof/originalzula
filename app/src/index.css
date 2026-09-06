@@ -62,6 +62,6 @@ li{
     background-color: #E9E9E9; 
 }
 *::-webkit-scrollbar-thumb:horizontal{
-    background: #100D1A;
-    border-radius: 10px;
+    background: #FFFFFF;
+    border-radius: 1px;
 }

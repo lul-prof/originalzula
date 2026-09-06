@@ -14,6 +14,7 @@ export const merch=[
     {
         _id:"m001",
         title:"hate signature beanie",
+        description:"hate signature beanie",
         price:999,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -25,6 +26,7 @@ export const merch=[
     {
         _id:"m002",
         title:"hate signature bucket hat",
+        description:"hate signature beanie",
         price:999,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -36,6 +38,7 @@ export const merch=[
     {
         _id:"m003",
         title:"hate signature trucker hat",
+        description:"hate signature beanie",
         price:999,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -47,6 +50,7 @@ export const merch=[
     {
         _id:"m004",
         title:"hate signature tshirt",
+        description:"hate signature beanie",
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -58,6 +62,7 @@ export const merch=[
     {
         _id:"m005",
         title:"hate signature hoodie",
+        description:"hate signature beanie",
         price:3800,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -69,6 +74,7 @@ export const merch=[
     {
         _id:"m006",
         title:"Mboka doba hoodie",
+        description:"hate signature beanie",
         price:3800,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -80,6 +86,7 @@ export const merch=[
     {
         _id:"m007",
         title:"Mboka doba signature tee",
+        description:"hate signature beanie",
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -91,6 +98,7 @@ export const merch=[
     {
         _id:"m008",
         title:"Mboka doba signature tee",
+        description:"hate signature beanie",
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
@@ -102,17 +110,19 @@ export const merch=[
     {
         _id:"m009",
         title:"Mboka doba signature hoodie",
+        description:"hate signature beanie",
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
         category:"apparel",
-        image:[merch9,merch9],
+        image:[merch9,merch4],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
     },
     {
         _id:"m010",
         title:"Mboka doba signature sweatshirt",
+        description:"hate signature beanie",
         price:3500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
