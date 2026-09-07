@@ -5,7 +5,7 @@ import { merch } from '../../assets/images/merch/merch'
 import { ShopContext } from '../../context/ShopContext'
 
 const MerchandisePage = () => {
-  const {currency}=useContext(ShopContext)
+  const {currency,addToCart}=useContext(ShopContext)
   return (
     <>
     <div className="merchandise">
@@ -61,7 +61,7 @@ const MerchandisePage = () => {
                 </div>
                 </Link>
                 <div className="merchandise-body-right-apparel-btn">
-                  <button>ADD TO CART</button>
+                  <button onClick={()=>(addToCart(apparel._id,"m"))}>ADD TO CART</button>
                 </div>
               </div>
               

@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import './NavbarComponent.css'
 import { FaSearch,FaShoppingBag,FaBars,FaTimes } from 'react-icons/fa'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/ShopContext'
 
 const NavbarComponent = () => {
     const scrollTo=(id)=>{
         document.getElementById(id).scrollIntoView({behavior:"smooth"})
     }
+    const {getCartCount}=useContext(ShopContext);
   return (
     <>
         <div className="navbar">
@@ -28,7 +31,18 @@ const NavbarComponent = () => {
                     <FaSearch className='search-icon' size={22} />
                 </div>
                 <div className="navbar-right-cart">
+                    <Link to={'/cart'}>
                     <FaShoppingBag className='cart-icon' size={22}/>
+                    {
+                    getCartCount()>0
+                    ?    
+                    <div className="navbar-right-cart-count rounded-3xl">
+                        {getCartCount()}
+                    </div>
+                    :
+                    <></>
+                    }
+                    </Link>
                 </div>
                 <div className="navbar-right-menu">
                     <FaBars className='cart-icon' size={22} onClick={()=>(document.getElementById("sidemenu").style.display="flex")}/>

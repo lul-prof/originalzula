@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react'
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useContext, useEffect, useState } from 'react'
 import "./SingleMerchandisePage.css"
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { merch } from '../../assets/images/merch/merch'
 import { FaRegHeart,FaHeart,FaRegStar,FaStar, FaPhone,FaAngleRight,FaPlus,FaMinus, FaFacebook, FaTwitter, FaWhatsapp, FaMailchimp } from 'react-icons/fa'
 import { ShopContext } from '../../context/ShopContext'
@@ -14,12 +15,42 @@ const SingleMerchandisePage = () => {
   const [index,setIndex]=useState(0)
   const [star,setStar]=useState()
   const [reviews,setReviews]=useState(true)
+  const [size,setSize]=useState("")
+  const navigate=useNavigate()
   const handleSubmit=async(e)=>{
     e.preventDefault()
   }
   const scrollTo=(id)=>{
         document.getElementById(id).scrollIntoView({behavior:"smooth"})
+  }
+   const {addToCart,updateQuantity,cartItems,products}=useContext(ShopContext);
+
+   const [cartData, setCartData] = useState([]);
+
+   useEffect(() => {
+    console.log(cartItems);
+    
+    if (products.length > 0) {
+      const tempData = [];
+
+      for (const items in cartItems) {
+        for (const item in cartItems[items]) {
+          if (cartItems[items][item] > 0) {
+            tempData.push({
+              _id: items,
+              size: item,
+              quantity: cartItems[items][item],
+            });
+          }
+        }
+      }
+      setCartData(tempData);
     }
+  }, [cartItems, products]);
+
+
+  const item=cartData.find(i=>i._id===merchandise._id);
+ 
   return (
     <>
     <div className="single-merch" id='single-merch'>
@@ -77,9 +108,9 @@ const SingleMerchandisePage = () => {
             </div>
             <div className="single-merch-item-right-sizes-sizes">
             {
-              merchandise.sizes.map((size,i)=>(
-                <div key={i} className="single-merch-item-right-sizes-size border-gray-400 hover:border-black cursor-pointer">
-                  <h3>{size}</h3>
+              merchandise.sizes.map((sz,i)=>(
+                <div onClick={()=>(setSize(sz))} style={{backgroundColor:size===sz?"black":"", color:size===sz?"white":"#000000"}} key={i} className="single-merch-item-right-sizes-size border-gray-400 hover:border-black cursor-pointer">
+                  <h3>{sz}</h3>
                 </div>
               ))
             }
@@ -93,22 +124,25 @@ const SingleMerchandisePage = () => {
           <div className="single-merch-item-right-buttons">
             <div className="single-merch-item-right-buttons-quantity">
               <div className="single-merch-item-right-buttons-quantity-left">
-                <input type="number" defaultValue={1} min={1}/>
+                <input 
+                type="number" 
+                value={item?item?.quantity:0} 
+                min={1} max={100}/>
               </div>
               <div className="single-merch-item-right-buttons-quantity-right">
                 <div className="single-merch-item-right-buttons-quantity-right-top">
-                  <FaPlus size={12}/>
+                  <FaPlus size={12} onClick={()=>(updateQuantity(merchandise._id,item?.size,item?.quantity+1))}/>
                 </div>
                 <div className="single-merch-item-right-buttons-quantity-right-bottom">
-                  <FaMinus size={12}/>
+                  <FaMinus size={12} onClick={()=>(updateQuantity(merchandise._id,item?.size,item?.quantity-1))}/>
                 </div>
               </div>
             </div>
             <div className="single-merch-item-right-buttons-add">
-              <button className='hover:bg-[#daea49] hover:text-black transition-colors disabled:opacity-50'>ADD TO CART</button>
+              <button className='hover:bg-[#daea49] hover:text-black transition-colors disabled:opacity-50' onClick={()=>(addToCart(merchandise._id,size))}>ADD TO CART</button>
             </div>
             <div className="single-merch-item-right-buttons-buy">
-                <button className='disabled:opacity-50 hover:bg-black hover:text-white transition-colors'>BUY NOW <FaAngleRight/></button>
+                <button className='disabled:opacity-50 hover:bg-black hover:text-white transition-colors' onClick={()=>(addToCart(merchandise._id,size),size!==""?navigate("/checkout"):"")}>BUY NOW <FaAngleRight/></button>
             </div>
           </div>
           <div className="single-merch-item-right-bottom border-gray-200">
@@ -181,11 +215,11 @@ const SingleMerchandisePage = () => {
                   <div className="single-merch-mid-body-reviews-mid-ratings">
                     <h5>Your Rating *</h5>
                     <div className="single-merch-mid-body-reviews-mid-ratings-stars">
-                      <FaRegStar fontSize={16}/>
-                      <FaRegStar fontSize={16}/>
-                      <FaRegStar fontSize={16}/>
-                      <FaRegStar fontSize={16}/>
-                      <FaRegStar fontSize={16}/>
+                      <FaStar color='yellow' fontSize={16}/>
+                      <FaStar color='yellow' fontSize={16}/>
+                      <FaStar color='yellow' fontSize={16}/>
+                      <FaStar color='yellow' fontSize={16}/>
+                      <FaStar color='yellow' fontSize={16}/>
                     </div>
                   </div>
                 </div>

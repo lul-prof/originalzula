@@ -10,18 +10,20 @@ import CartPage from './pages/CartPage/CartPage'
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage'
 import OrdersPage from './pages/OrdersPage/OrdersPage'
 import HeroComponent from './components/HeroComponent/HeroComponent'
+import {Toaster} from "react-hot-toast"
 
 const App = () => {
   return (
+    <>
+    <Toaster/>
+    <NavbarComponent/>
     <Routes>
       <Route path='/' element={
         <>
-        <NavbarComponent/>
         <HeroComponent/>
         <MusicComponent/>
         <MerchandiseComponent/>
         <ContactComponent/>
-        <FooterComponent/>
         </>
         }></Route>
         <Route path='/merchandise' element={<MerchandisePage/>}></Route>
@@ -30,6 +32,8 @@ const App = () => {
         <Route path='/checkout' element={<CheckoutPage/>}></Route>
         <Route path='/orders' element={<OrdersPage/>}></Route>
     </Routes>
+    <FooterComponent/>
+    </>
   )
 }
 

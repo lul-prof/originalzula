@@ -1,0 +1,354 @@
+.checkout{
+    background-color: #FFFFFF;
+    color: #000000;
+    min-height: 100vh;
+    padding-top: 64px;
+    padding-inline: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.checkout .checkout-link {
+    margin-bottom: 16px;
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.checkout .checkout-link  a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.checkout .checkout-link a:hover{
+    color: #daea49;
+    transition: all 150ms ease;
+    cursor: pointer;
+}
+.checkout .checkout-header h2{
+    font-family: "Anton";
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 32px;
+}
+.checkout .checkout-mid{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+.checkout .checkout-mid .checkout-mid-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.checkout .checkout-mid .checkout-mid-left .checkout-mid-left-header{
+    font-family: "Anton";
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-email{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-email input[type="email"]{
+    width: 100%;
+    border-width: 2px;
+    padding: 16px;
+    font-family: "Inter",sans-serif;
+    transition: all 150ms ease;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-email input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-email input:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: #000000;
+
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-email .checkout-form-class-email-check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form  .checkout-form-class-ship{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form  .checkout-form-class-ship .checkout-form-class-ship-name{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form  .checkout-form-class-ship input{
+    width: 100%;
+    border-width: 2px;
+    padding: 16px;
+    font-family: "Inter",sans-serif;
+    transition: all 150ms ease;
+    border-color: #E5E7EB;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form  .checkout-form-class-ship input:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: #000000;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form  .checkout-form-class-ship .checkout-form-class-ship-header h3{
+    font-family: "Anton";
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-header h3{
+    font-family: "Anton";
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa{
+    padding: 16px;
+    border-bottom-width:2px;
+    cursor: pointer;
+    transition: all 150ms ease;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    border-bottom-color:#E5E7EB ;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-left{
+    margin-top: 4px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-right{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-right h3{
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.75rem;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-right .checkout-form-class-payment-mpesa-right-mid{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-right .checkout-form-class-payment-mpesa-right-mid input{
+    width: 100%;
+    border-width: 2px;
+    padding: 12px;
+    font-family: "Inter",sans-serif;
+    border-color: #E5E7EB;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-mpesa .checkout-form-class-payment-mpesa-right .checkout-form-class-payment-mpesa-right-mid input:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: #daea49;
+    transition: all 150ms ease;
+}
+/*  */
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-paypal{
+    padding: 16px;
+    border-bottom-width:2px;
+    cursor: pointer;
+    transition: all 150ms ease;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    border-bottom-color:#E5E7EB ;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-paypal .checkout-form-class-payment-paypal-left{
+    margin-top: 4px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-paypal .checkout-form-class-payment-paypal-right{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-paypal .checkout-form-class-payment-paypal-right h3{
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.75rem;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-payment .checkout-form-class-payment-paypal .checkout-form-class-payment-paypal-right .checkout-form-class-payment-paypal-right-mid{
+    padding: 8px;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-btn button{
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-block: 1.25rem;
+    border-radius: 100px;
+    font-family: "Inter",sans-serif;
+    font-size: 18px;
+    line-height: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: all 150ms ease;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.checkout .checkout-mid .checkout-mid-left  .checkout-mid-left-form form .checkout-form-class-btn button:hover{
+    background-color: #daea49;
+    color: #000000;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+
+}
+.checkout .checkout-mid .checkout-mid-right{
+    padding: 2rem;
+    border-width: 2px;
+    position: sticky;
+    top: 96px;
+    max-width: 40%;
+    width: fit-content;
+    height: 100%;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-header{
+    font-family: "Anton";
+    font-size: 24px;
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 1.5rem;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom-width: 2px;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item .checkout-mid-right-item-image{
+    width: 62px;
+    height: 62px;
+    position: relative;
+    perspective: 500px;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item .checkout-mid-right-item-image img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    object-fit: cover;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item .checkout-mid-right-item-image img:hover{
+    cursor: pointer;
+    transform: translateZ(40px);
+    transition: all 150ms ease;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item  .checkout-mid-right-item-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item  .checkout-mid-right-item-details .checkout-mid-right-item-details-left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item  .checkout-mid-right-item-details .checkout-mid-right-item-details-left h4{
+    font-family: "Inter-bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item  .checkout-mid-right-item-details .checkout-mid-right-item-details-left p{
+    font-family: "Inter-regular",sans-serif;
+    font-size: 12px;
+    line-height: 1rem;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-items .checkout-mid-right-item .checkout-mid-right-item-details .checkout-mid-right-item-details-right{
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25rem;
+    align-self: self-end;
+    display: flex;
+}
+
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    letter-spacing: 0.025em;
+    margin-bottom: 24px;
+    padding-bottom: 24px; 
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-bottom .checkout-mid-right-bottom-sub{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-bottom .checkout-mid-right-bottom-ship{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-total h3{
+    font-family: "Inter",sans-serif;
+    font-size: 18px;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-total h4{
+    font-family: "Inter",sans-serif;
+    font-size: 24px;
+    line-height: 2rem;
+    font-weight: 700;
+}
+.checkout .checkout-mid .checkout-mid-right .checkout-mid-right-total h4 span{
+    font-size: 12px;
+    line-height: 1rem;
+}
