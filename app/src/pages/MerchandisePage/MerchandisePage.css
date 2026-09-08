@@ -106,6 +106,7 @@
     column-gap: 24px;
     row-gap: 32px;
     margin-bottom: 64px;
+    width: 80%;
 }
 .merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel{
     display: flex;

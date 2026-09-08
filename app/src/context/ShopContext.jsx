@@ -2,6 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 import { merch } from "../assets/images/merch/merch";
 import {toast} from 'react-hot-toast'
+import { demoOrders } from "../assets/assets";
 
 export const ShopContext = createContext();
 
@@ -12,6 +13,8 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
   const [products,setProducts]=useState(merch)
+  const [orders,setOrders]=useState(demoOrders)
+
 
   const addToCart = async (productId,size) => {
     if(!size){
@@ -102,6 +105,8 @@ const ShopContextProvider = (props) => {
     cartItems,
     setCartItems,
     products,
+    orders,
+    setOrders
   };
 
   return (

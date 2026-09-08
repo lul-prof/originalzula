@@ -32,6 +32,9 @@ body{
     font-size: clamp(14px,16px,18px);
     background-color: #FFFFFF;
 }
+.container{
+    justify-self: center;
+}
 li{
     font-family: "space-mono-regular";
     font-size: 14px;

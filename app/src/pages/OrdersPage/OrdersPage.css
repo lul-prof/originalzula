@@ -1,0 +1,99 @@
+.orders{
+    background-color: #FFFFFF;
+    color: #000000;
+    min-height: 100vh;
+    padding-top: 64px;
+    padding-inline: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.orders .orders-links{
+    margin-bottom: 16px;
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.orders .orders-links:hover{
+    color: #daea49;
+    transition: all 150ms ease;
+}
+.orders .orders-header{
+    font-family: "Anton";
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 32px;
+}
+
+.orders .orders-class{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.orders .orders-class .order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:4px 12px;
+}
+.orders .orders-class .order .order-image{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 500px;
+}
+.orders .orders-class .order .order-image img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    object-fit: contain;
+}
+.orders .orders-class .order .order-image img:hover{
+    cursor: pointer;
+    transform: translateZ(50px);
+    transition: all 150ms ease;
+}
+.orders .orders-class .order .order-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+.orders .orders-class .order .order-details .order-details-top{
+    font-family: "Anton";
+    font-size: 18px;
+    line-height: 1.75rem;
+    letter-spacing: 0.025em;
+    text-transform: capitalize;
+}
+.orders .orders-class .order .order-details .order-details-mid{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.orders .orders-class .order .order-details .order-details-mid p{
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+}
+.orders .orders-class .order .order-details .order-details-date{
+    font-family: "Inter",sans-serif;
+    font-size: 14px;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+}
+.orders .orders-class .order .order-track button{
+    padding: 8px 12px;
+}
