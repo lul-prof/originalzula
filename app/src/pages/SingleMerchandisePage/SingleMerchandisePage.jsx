@@ -256,7 +256,7 @@ const SingleMerchandisePage = () => {
           <div className="single-merch-related-apparel">
           {
             merch.map((m)=>(
-              m._id !==merchandise._id
+              m._id !==merchandise._id && m.category===merchandise.category
               ?
               <>
               <Link to={`/merchandise/${m._id}`} onClick={()=>(scrollTo("single-merch"))}>

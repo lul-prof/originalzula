@@ -1,4 +1,3 @@
-import React from 'react'
 import './HeroComponent.css'
 
 const HeroComponent = () => {

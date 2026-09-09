@@ -12,6 +12,7 @@ import OrdersPage from './pages/OrdersPage/OrdersPage'
 import HeroComponent from './components/HeroComponent/HeroComponent'
 import {Toaster} from "react-hot-toast"
 
+
 const App = () => {
   return (
     <>

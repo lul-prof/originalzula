@@ -1,11 +1,13 @@
 import  { useContext } from 'react'
 import "./MerchandisePage.css"
 import { Link } from 'react-router-dom'
-import { merch } from '../../assets/images/merch/merch'
 import { ShopContext } from '../../context/ShopContext'
 
 const MerchandisePage = () => {
-  const {currency,addToCart}=useContext(ShopContext)
+  const {currency,addToCart,products}=useContext(ShopContext)
+
+
+  
   return (
     <>
     <div className="merchandise">
@@ -22,10 +24,11 @@ const MerchandisePage = () => {
         </div>
         <div className="merchandise-header-right">
           <h3 className='text-gray-400'>SORT BY:</h3>
-          <select name="category" id="category" defaultValue={"Featured"}>
+          <select name="category" id="category">
+            <option value="">Relevant</option>
             <option value="featured">Featured</option>
-            <option value="high">Price: High to Low</option>
-            <option value="low">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+            <option value="low-high">Price: Low to High</option>
             <option value="newest">Newest</option>
           </select>
         </div>
@@ -39,17 +42,16 @@ const MerchandisePage = () => {
           <div className="merchandise-body-left-categories">
             <ul>
               <li>All Products</li>
-              <li>Apparel</li>
-              <li>Accessories</li>
-              <li>Music</li>
-              <li>Posters</li>
+              <li>Apparel ({products.filter(product=>product.category==='apparel').length})</li>
+              <li>Accessories ({products.filter(product=>product.category==='accessories').length})</li>
+              <li>Music ({products.filter(product=>product.category==='music').length})</li>
+              <li>Posters ({products.filter(product=>product.category==='posters').length})</li>
             </ul>
           </div>
         </div>
         <div className="merchandise-body-right">
           {
-            merch.map((apparel)=>(
-              
+            products.map((apparel)=>(
               <div key={apparel._id} className="merchandise-body-right-apparel">
                 <Link to={`/merchandise/${apparel._id}`}>
                 <div className="merchandise-body-right-apparel-image">

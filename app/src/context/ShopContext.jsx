@@ -14,6 +14,10 @@ const ShopContextProvider = (props) => {
 
   const [products,setProducts]=useState(merch)
   const [orders,setOrders]=useState(demoOrders)
+  const [search, setSearch] = useState("");
+  const [track,setTrack]=useState({})
+  const [showSearch, setShowSearch] = useState(false);
+
 
 
   const addToCart = async (productId,size) => {
@@ -106,7 +110,13 @@ const ShopContextProvider = (props) => {
     setCartItems,
     products,
     orders,
-    setOrders
+    setOrders,
+    search,
+    showSearch,
+    setSearch,
+    setShowSearch,
+    track,
+    setTrack
   };
 
   return (

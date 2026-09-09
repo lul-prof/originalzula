@@ -10,8 +10,8 @@ const MusicComponent = () => {
   const [id,setId]=useState()
   const [media,setMedia]=useState("")
 
+  
   useEffect(()=>{
-
   },[id,active])
   return (
     <>
@@ -91,8 +91,6 @@ const MusicComponent = () => {
             </div>
           </div>
        </div>
-       {/*-----------------------------------*/}
-       
     </div>
     </>
   )

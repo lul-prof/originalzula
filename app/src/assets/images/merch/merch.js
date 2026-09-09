@@ -111,7 +111,7 @@ export const merch=[
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
-        category:"apparel",
+        category:"accessories",
         image:[beanie2,beanie2a],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
@@ -123,7 +123,7 @@ export const merch=[
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
-        category:"apparel",
+        category:"accessories",
         image:[cuffedB,cuffedB1],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
@@ -135,7 +135,7 @@ export const merch=[
         price:2500,
         quantity:100,
         sizes:["xxl","xl","l","m","s"],
-        category:"apparel",
+        category:"accessories",
         image:[tucker2,tucker2a],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
@@ -243,7 +243,7 @@ export const merch=[
         price:3500,
         quantity:100,
         sizes:["36","37","38","39","40"],
-        category:"apparel",
+        category:"accessories",
         image:[shoes1,shoes1a],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
@@ -255,7 +255,7 @@ export const merch=[
         price:3500,
         quantity:100,
         sizes:["36","37","38","39","40"],
-        category:"apparel",
+        category:"accessories",
         image:[shoes2,shoes2a],
         date:new Date("2026-09-04T12:28:00.000Z") ,
         featured:false
