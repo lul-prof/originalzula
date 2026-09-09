@@ -1,9 +1,11 @@
 import contactImage from './images/CONTACT.webp'
 import zula from './images/zula.webp'
+import zula1 from "./images/zula1.png"
 
 export const assets={
     contactImage,
     zula,
+    zula1
 }
 
 export const demoOrders=[

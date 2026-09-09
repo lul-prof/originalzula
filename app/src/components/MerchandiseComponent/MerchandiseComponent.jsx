@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 
 const MerchandiseComponent = () => {
     const {currency}=useContext(ShopContext)
+   
   return (
     <>
         <div className="merchandise-component border-gray-100">

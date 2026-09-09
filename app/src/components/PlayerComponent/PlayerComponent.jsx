@@ -15,22 +15,21 @@ import {
 import { tracklist, tracks } from "../../assets/music/music";
 import { assets } from "../../assets/assets";
 
-const PlayerComponent = ({music}) => {
+const PlayerComponent = ({title,artist,idx}) => {
   const songs = Object.values(tracklist);
   const player = useRef(null);
   const progressBar = useRef();
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(idx);
   const [isPlaying, setIsPlaying] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(50);
   const [mute, setMute] = useState(false);
-//   const [currentSong, setCurrentSong] = useState(
-//     Object.values(tracklist)[index],
-//   );
+  const [currentSong, setCurrentSong] = useState(songs[index] || songs[0] );
 
-    const [currentSong, setCurrentSong] = useState(music)
+  
 
+ 
 
   useEffect(() => {
     if (isPlaying) {
@@ -92,7 +91,6 @@ const PlayerComponent = ({music}) => {
   };
 
   const toggleNext = () => {
-    //player.current.stop()
     if (index >= songs.length - 1) {
       setIndex(0);
       player.current.src = songs[0];
@@ -121,8 +119,8 @@ const PlayerComponent = ({music}) => {
               <img src={assets.zula} alt="artistImage" />
             </div>
             <div className="player-top-details-title">
-              <h4 className="truncate">{"Zelle"}</h4>
-              <p className="text-gray-400 text-sm truncate ">{"Zula"}</p>
+              <h4 className="truncate">{title?title:"Kante"}</h4>
+              <p className="text-gray-400 text-sm truncate ">{artist?artist:"Original Zula"}</p>
             </div>
           </div>
           <div className="player-top-ctrls">
@@ -213,17 +211,17 @@ const PlayerComponent = ({music}) => {
           />
         </div>
         <div className="playlist-tracks">
-          {tracks.map((trk, i) => (
+          {tracks.map((trk) => (
             <div
               key={trk._id}
+              
               style={{
                 background:
                   trk.track === currentSong
                     ? "rgba(255,255,255,0.1)"
                     : "rgba(255,255,255,0.05)",
               }}
-              className="playlist-track"
-            >
+              className="playlist-track">
               <div className="track-left">
                 <div className="track-left-image">
                   <img src={trk.thumbnail} alt="thumbnail" />

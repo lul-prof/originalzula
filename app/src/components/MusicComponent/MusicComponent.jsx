@@ -4,15 +4,20 @@ import './MusicComponent.css'
 import {Link} from 'react-router-dom'
 import {FaMusic, FaCompactDisc, FaPlay, FaSpotify, FaApple, FaYoutube, FaDeezer} from 'react-icons/fa'
 import { useEffect, useState } from 'react'
+import PlayerComponent from '../PlayerComponent/PlayerComponent'
 
 const MusicComponent = () => {
   const [active,setActive]=useState(true);
   const [id,setId]=useState()
   const [media,setMedia]=useState("")
 
+  const [title,setTitle]=useState("")
+  const [artist,setArtist]=useState("")
+
+  const [idx,setIdx]=useState(0)
   
   useEffect(()=>{
-  },[id,active])
+  },[id,active,idx])
   return (
     <>
     <div id='music' className="music-component border-gray-200">
@@ -49,8 +54,8 @@ const MusicComponent = () => {
             </div>
             <div className="music-component-mid-right-tracks">
               {
-                tracks.map((track)=>(
-                  <div key={track._id} onMouseOver={()=>(setActive(!active),setId(track._id))} onMouseOut={()=>(setActive(!active),setId(""))} className="music-component-mid-right-tracks-track border-gray-100 hover:bg-gray-50 transition-colors duration-300 rounded-xl cursor-pointer">
+                tracks.map((track,index)=>(
+                  <div onClick={()=>(setArtist(track.artist),setTitle(track.title),setIdx(index))} key={track._id} onMouseOver={()=>(setActive(!active),setId(track._id))} onMouseOut={()=>(setActive(!active),setId(""))} className="music-component-mid-right-tracks-track border-gray-100 hover:bg-gray-50 transition-colors duration-300 rounded-xl cursor-pointer">
                     <div style={{backgroundColor:track._id===id?"#daea49":""}} className="music-component-mid-right-tracks-track-track-left bg-gray-200 rounded-3xl">
                       <FaPlay style={{color: track._id===id?"black":""}}  fontSize={14} className='play-icon' />
                     </div>
@@ -92,6 +97,7 @@ const MusicComponent = () => {
           </div>
        </div>
     </div>
+    <PlayerComponent artist={artist} title={title} idx={idx}/>
     </>
   )
 }
