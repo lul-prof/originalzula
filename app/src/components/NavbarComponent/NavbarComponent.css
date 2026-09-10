@@ -6,7 +6,8 @@
     gap: 48px;
     width: 100%;
     max-width: 100vw;
-    padding: 20px 40px;
+    padding-inline: 20px;
+    padding-block: 12px;
     align-items: center;
     position: fixed;
     top: 0;
@@ -14,6 +15,7 @@
     right: 0;
     z-index: 100;
     background-color: #FFFFFF;
+    overflow: hidden;
 }
 .navbar .navbar-center h1{
     font-family: "space-mono-bold";
@@ -28,11 +30,15 @@
     opacity: 0.7;
     transition: 0.3s ease-in-out;
 }
+
+.navbar .navbar-center h1 span{
+    display: none;
+}
 .navbar .navbar-left ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 48px;
+    gap: 40px;
     list-style: none;
 }
 .navbar .navbar-left ul li{
@@ -50,7 +56,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 48px;
+    gap: 20px;
     align-items: center;
 }
 .navbar .navbar-right .navbar-right-search{
@@ -161,7 +167,7 @@
 }
 .sidemenu .sidemenu-bottom h3{
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 18px;
     line-height: 16px;
     letter-spacing: 0.025em;
     font-weight: 500;
@@ -172,8 +178,59 @@
 
 }
 
-@media (max-width:769px) {
+@media (max-width:768px) {
+.navbar{
+    padding-inline: 40px;
+    padding-block: 20px;
+}
+.navbar .navbar-left {
+    display: none;
+    gap: 24px;
+}
+.navbar .navbar-center{
+    max-width: 50%;
+}
+.navbar .navbar-center h1{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.75rem;
+    text-wrap: nowrap;
+}
+.navbar .navbar-center h1 span{
+    display: inline;
+}
+.navbar .navbar-right{
+    gap: 16px;
+}
+
+.navbar .navbar-right .navbar-right-cart .navbar-right-cart-count{
+    bottom: 25%;
+    left: 50%;
+    font-family: "Inter",sans-serif;
+}
 .navbar .navbar-right .navbar-right-menu{
     display: block;
+}
+
+}
+
+@media (max-width:640px) {
+.sidemenu .sidemenu-bottom h3{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.025em;
+}
+}
+
+@media (max-width:425px) {
+.navbar{
+    padding-inline: 20px;
+    padding-block: 10px;
+    flex-wrap: nowrap;
+}
+.navbar .navbar-center h1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25rem;
 }
 }

@@ -15,7 +15,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;   
-    
+    margin-bottom: 16px;
 }
 .cart .cart-links h3{
     display: flex;
@@ -39,7 +39,7 @@
 .cart .cart-mid{
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 80px;
 }
 .cart .cart-mid .cart-mid-left{
     width: 65%;
@@ -80,8 +80,9 @@
     align-items: center;
 }
 .cart .cart-mid .cart-mid-left .cart-mid-left-items .cart-mid-left-item .cart-mid-left-item-product .cart-mid-left-item-image{
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
+    aspect-ratio: 1/1;
     position: relative;
     perspective: 500px;
 }
@@ -138,7 +139,7 @@
     display: flex;
     flex-direction: row;
     width: 96px;
-    height: 48px;
+    height: 40px;
     padding-inline: 16px;
     font-family: "Inter",sans-serif;
     font-size: 14px;
@@ -171,14 +172,14 @@
     justify-content: center;
     align-items: center;
     border-bottom-width: 2px;
-    height: 24px;
+    height: 20px;
     padding: 4px;
 }
 .cart .cart-mid .cart-mid-left .cart-mid-left-items .cart-mid-left-item .cart-mid-left-item-quantity .cart-mid-left-item-quantity-right .cart-mid-left-item-quantity-right-bottom{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 24px;
+    height: 20px;
     padding: 4px;
 }
 
@@ -214,7 +215,7 @@
     line-height: 1.5rem;
     margin-bottom: 32px;
     padding-bottom: 32px;
-
+    border-bottom-width:2px ;
 }
 .cart .cart-mid .cart-mid-right .cart-mid-right-mid .cart-mid-right-mid-subtotal{
     display: flex;
@@ -287,4 +288,41 @@
     color: #FFFFFF;
     transition: all 150ms ease;
     cursor: pointer;
+}
+
+@media (max-width:768px) {
+.cart{
+    padding-inline: 32px;
+}
+.cart .cart-header h2{
+    font-size: 3.75rem;
+}
+.cart .cart-mid{
+    flex-direction: column;
+    gap: 48px;
+}
+.cart .cart-mid .cart-mid-left{
+    width: 100%;
+}
+.cart .cart-mid .cart-mid-left .cart-mid-left-header{
+    display: none;
+}
+.cart .cart-mid .cart-mid-left .cart-mid-left-items .cart-mid-left-item{
+    grid-template-columns: 1fr;
+}
+.cart .cart-mid .cart-mid-left .cart-mid-left-items .cart-mid-left-item .cart-mid-left-item-price{
+    display: none;
+}
+.cart .cart-mid .cart-mid-right{
+    width: 100%;
+}
+}
+
+@media (max-width:425px) {
+.cart{
+    padding-inline: 16px;
+} 
+.cart .cart-header h2{
+    font-size: 3rem;
+} 
 }

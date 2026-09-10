@@ -20,32 +20,34 @@ const MusicComponent = () => {
   },[id,active,idx])
   return (
     <>
-    <div id='music' className="music-component border-gray-200">
+    <section id='music' className="music-component border-gray-200">
       {/*-----------------------------------*/}
        <div className="music-component-header">
           <div className="music-component-header-left">
-            <FaCompactDisc size={40} className='animate-[spin_5s_linear_infinite] '/>
+            <FaCompactDisc className='animate-[spin_5s_linear_infinite] h-8 w-8 md:h-10 md:w-10'/>
             <h2>MUSIC <span>CATALOGUE</span></h2>
           </div>
           <div className="music-component-header-right">
-            <FaMusic size={40} color='#d1d5db' className='animate-bounce'/>
+            <FaMusic  color='#d1d5db' className='animate-bounce w-5 h-5 md:w-10 md:h-10' />
           </div>
        </div>
        {/*-----------------------------------*/}
        <div className="music-component-mid">
-          <div className="music-component-mid-left">
+          <div className="music-component-mid-left relative aspect-square w-full max-w-120 mx-auto lg:mx-0 rounded-2xl overflow-hidden group border border-gray-200 shadow-xl shadow-black/5">
+            
             <div className="music-component-mid-left-release">
               <div className="music-component-mid-left-release-top">
                 <h4 className='latest'>LATEST RELEASE</h4>
                 <h2 className='title drop-shadow-lg'>KANTE</h2>
                 <h4 className='artist drop-shadow-md text-white'>Original Zula</h4>
               </div>
-              <div className="music-component-mid-left-release-bottom">
+              <div className="music-component-mid-left-release-bottom rounded-full">
                 <h4><FaPlay  fontSize={18} fontFamily='Inter'/> PLAY NOW</h4>
               </div>
             </div>
             <div className="music-component-mid-left-img">
-              <img src={assets.zula} alt="ZulaPic" />
+              <img className='w-full h-full object-cover object-center scale-110 group-hover:scale-125 transition-transform duration-700'  src={assets.zula} alt="ZulaPic" />
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-70 -z-20 "></div>
             </div>
           </div>
           <div className="music-component-mid-right">
@@ -96,7 +98,7 @@ const MusicComponent = () => {
             </div>
           </div>
        </div>
-    </div>
+    </section>
     <PlayerComponent artist={artist} title={title} idx={idx}/>
     </>
   )

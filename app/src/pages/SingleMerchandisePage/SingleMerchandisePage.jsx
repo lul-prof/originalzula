@@ -65,14 +65,14 @@ const SingleMerchandisePage = () => {
       {/*-----------------------------*/}
       <div className="single-merch-item">
         <div className="single-merch-item-left">
-          <div className="single-merch-item-left-top">
-            <img src={merchandise.image[index]} alt="apparelImage" />
+          <div className="single-merch-item-left-top bg-gray-50">
+            <img src={merchandise.image[index]} alt="apparelImage" loading='lazy' />
           </div>
           <div className="single-merch-item-left-bottom">
             {
               merchandise.image.map((image,i)=>(
-                <div key={i} className="single-merch-item-left-bottom-image">
-                  <img key={i} src={image} alt="Apparelimages"  onClick={()=>(setIndex(i))}/>
+                <div key={i} className="single-merch-item-left-bottom-image bg-gray-50">
+                  <img key={i} src={image} alt="Apparelimages"  onClick={()=>(setIndex(i))} loading='lazy'/>
                 </div>
               ))
             }
@@ -261,8 +261,8 @@ const SingleMerchandisePage = () => {
               <>
               <Link to={`/merchandise/${m._id}`} onClick={()=>(scrollTo("single-merch"))}>
               <div key={m._id} className="single-merch-related-item">
-                <div className="single-merch-related-item-image">
-                  <img src={m.image[0]} alt="apparelImage" />
+                <div className="single-merch-related-item-image bg-gray-100 overflow-hidden rounded-sm">
+                  <img src={m.image[0]} alt="apparelImage" loading='lazy'/>
                 </div>
                 <div className="single-merch-related-item-details">
                   <h3 className='text-gray-900 group-hover:underline decoration-1 underline-offset-2 decoration-gray-300'>{m.title}</h3>

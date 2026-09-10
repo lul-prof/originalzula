@@ -15,7 +15,7 @@ import {Toaster} from "react-hot-toast"
 
 const App = () => {
   return (
-    <>
+    <main>
     <Toaster/>
     <NavbarComponent/>
     <Routes>
@@ -34,7 +34,7 @@ const App = () => {
         <Route path='/orders' element={<OrdersPage/>}></Route>
     </Routes>
     <FooterComponent/>
-    </>
+    </main>
   )
 }
 

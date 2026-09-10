@@ -19,7 +19,7 @@ const OrdersPage = () => {
   
   return (
     <>
-    <div className="orders">
+    <section className="orders">
       <Link to={'/checkout'}>
         <div className="orders-links">
           <FaArrowLeft/>
@@ -78,7 +78,7 @@ const OrdersPage = () => {
           }).reverse()
         }
       </div>
-    </div>
+    </section>
     </>
   )
 }

@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "space-mono-regular";
     src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
@@ -28,6 +29,10 @@
     font-family: "Inter-bold";
     src: url("./assets/fonts/Inter/static/Inter_18pt-Bold.ttf");
 }
+@font-face {
+    font-family: "Dm-serif";
+    src: url("./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
+}
 body{
     font-size: clamp(14px,16px,18px);
     background-color: #FFFFFF;
@@ -35,12 +40,7 @@ body{
 .container{
     justify-self: center;
 }
-li{
-    font-family: "space-mono-regular";
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-}
+
 ::selection{
     color: #daea49;
     background-color: #000;
@@ -53,18 +53,8 @@ li{
     width: 10px; 
     height: 0;
 }
-*::-webkit-scrollbar-track { 
-    background-color: #E9E9E9; 
-}
+
 *::-webkit-scrollbar-thumb {
     background: #000000;
-    border-radius: 5px;
     cursor: pointer;
-}
-*::-webkit-scrollbar-track:horizontal { 
-    background-color: #E9E9E9; 
-}
-*::-webkit-scrollbar-thumb:horizontal{
-    background: #FFFFFF;
-    border-radius: 1px;
 }

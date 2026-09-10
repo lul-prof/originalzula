@@ -10,7 +10,7 @@ const MerchandiseComponent = () => {
    
   return (
     <>
-        <div className="merchandise-component border-gray-100">
+        <section className="merchandise-component border-gray-100">
             {/*---------------------------------------*/}
             <div className="merchandise-component-header">
                 <div className="merchandise-component-header-left ">
@@ -33,8 +33,8 @@ const MerchandiseComponent = () => {
                     m.featured?
                         <div key={m._id} className="merch">
                             <Link to={`/merchandise/${m._id}`}>
-                            <div className="merch-img">
-                                <img  src={m.image[0]} alt="merchImage" />
+                            <div className="merch-img rounded-sm">
+                                <img  src={m.image[0]} alt="merchImage" loading='lazy' />
                             </div>
                             <div className="merch-title">
                                 <h3 className='text-gray-700'>{m.title}</h3>
@@ -49,7 +49,7 @@ const MerchandiseComponent = () => {
                     ))
             }
             </div>
-        </div>
+        </section>
     </>
   )
 }

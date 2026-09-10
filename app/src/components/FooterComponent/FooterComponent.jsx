@@ -5,7 +5,7 @@ import { FaInstagram,FaTiktok,FaFacebook,FaYoutube,FaSpotify } from 'react-icons
 const FooterComponent = () => {
   return (
     <>
-    <div className="footer">
+    <footer className="footer">
         {/*---------------------*/}
         <div className="footer-top">
             <h1>ORIGINAL ZULA</h1>
@@ -39,15 +39,14 @@ const FooterComponent = () => {
             </div>
         </div>
         {/*----------------------------*/}
-        <div className="footer-separator">
-            <hr />
+        <div className="footer-separator w-[90%] max-w-2xl h-px bg-[#333] mb-8 ">
         </div>
         {/*------------------------*/}
         <div className="footer-bottom">
             <h5>&copy; { new Date().getFullYear() } ORIGINAL ZULA, ALL RIGHTS RESERVED</h5>
             <h6>POWERED BY <Link to={"https://israelmutua.vercel.app/"} target='_blank' referrerPolicy='no-referrer'><span>CAPIOF</span></Link> </h6>
         </div>
-    </div>
+    </footer>
     </>
   )
 }

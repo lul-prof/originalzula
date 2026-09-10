@@ -43,7 +43,7 @@ const CheckoutPage = () => {
       }
   return (
     <>
-    <div className="checkout">
+    <section className="checkout">
       {/*------------------------*/}
       <div className="checkout-link">
         <Link to={"/cart"}>
@@ -132,7 +132,7 @@ const CheckoutPage = () => {
               </div>
               <Link to={'/orders'}>
               <div className="checkout-form-class-btn">
-                <button type='submit' className='shadow-black/10 cursor-pointer'>PAY {currency} {getCartAmount().toLocaleString()}</button>
+                <button type='submit' className='shadow-black/10 cursor-pointer rounded-full'>PAY {currency} {getCartAmount().toLocaleString()}</button>
               </div>
               </Link>
             </form>
@@ -148,7 +148,7 @@ const CheckoutPage = () => {
                 const merchandise=products.find(merch=>merch._id===item._id);
                 return(
                   <div key={item._id} className="checkout-mid-right-item">
-                      <div className="checkout-mid-right-item-image">
+                      <div className="checkout-mid-right-item-image shrink-0 overflow-hidden border-gray-200 border">
                         <img src={merchandise.image[0]} alt="apparelImage" />
                       </div>
                       <div className="checkout-mid-right-item-details ">
@@ -186,7 +186,7 @@ const CheckoutPage = () => {
         </div>
       </div>
       
-    </div>
+    </section>
     </>
   )
 }

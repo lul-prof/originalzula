@@ -30,7 +30,7 @@ const CartPage = () => {
     }, [cartItems, products]);
   return (
     <>
-    <div className="cart">
+    <section className="cart">
       {/*---------------------*/}
       <div className="cart-links">
         <Link to={'/merchandise'}>
@@ -56,7 +56,7 @@ const CartPage = () => {
               let prod=products.find(p=>p._id===item._id)
               return(
                 <div key={item._id} className="cart-mid-left-item border-gray-200">
-                  <div className="cart-mid-left-item-product col-span-6">
+                  <div className="cart-mid-left-item-product col-span-6 md:col-span-1">
                     <div className="cart-mid-left-item-image">
                       <img src={prod.image[0]} alt="productImage" />
                     </div>
@@ -69,7 +69,7 @@ const CartPage = () => {
                   <div className="cart-mid-left-item-price col-span-2">
                     <span>{currency} {prod.price.toLocaleString()}</span>
                   </div>
-                  <div className="cart-mid-left-item-quantity col-span-2">
+                  <div className="cart-mid-left-item-quantity col-span-2 md:col-span-1">
                     <div className="cart-mid-left-item-quantity-left">
                       <input type="number" value={item?.quantity} />
                     </div>
@@ -83,7 +83,7 @@ const CartPage = () => {
                     </div>
                   </div>
                   <div className="cart-mid-left-item-total col-span-2 text-right ">
-                    <span>{currency} {prod.price * item.quantity}</span>
+                    <span>{currency} {(prod.price * item.quantity).toLocaleString()}</span>
                   </div>
                 </div>
               )
@@ -124,7 +124,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
     </>
   )
 }

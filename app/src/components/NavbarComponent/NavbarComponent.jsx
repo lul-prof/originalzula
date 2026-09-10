@@ -11,19 +11,19 @@ const NavbarComponent = () => {
     const {getCartCount}=useContext(ShopContext);
   return (
     <>
-        <div className="navbar">
+        <header className="navbar border-b border-gray-100">
             {/*----------------------*/}
-            <div className="navbar-left">
+            <nav className="navbar-left">
                 <ul>
                    <li><Link to={'/'}>HOME</Link></li> 
                     <li onClick={()=>(scrollTo('music'))}>MUSIC</li>
                     <li><Link to={'/merchandise'}>MERCH</Link></li>
                     <li onClick={()=>(scrollTo('contact'))}>CONTACT</li>
                 </ul>
-            </div>
+            </nav>
             {/*------------------------*/}
             <div className="navbar-center">
-                <h1><Link to={'/'}>ZULA</Link></h1>
+                <h1><Link to={'/'}><span>ORIGINAL</span> ZULA</Link></h1>
             </div>
             {/*------------------------*/}
             <div className="navbar-right">
@@ -48,7 +48,7 @@ const NavbarComponent = () => {
                     <FaBars className='cart-icon' size={22} onClick={()=>(document.getElementById("sidemenu").style.display="flex")}/>
                 </div>
             </div>
-        </div>
+        </header>
         <div className="sidemenu" id='sidemenu'>
            <div className="sidemenu-top border-gray-500">
                 <div className="sidemenu-top-left">

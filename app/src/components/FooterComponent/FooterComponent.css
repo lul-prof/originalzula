@@ -3,31 +3,44 @@
     background: #0a0a0a;
     color: #FFFFFF;
     position: relative;
-    padding-top: 4rem;  
+    padding-top: 80px;  
     padding-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 48px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-top-width: 1px;
-    border-color: #FFFFFF;
+    border-color: rgba(255,255,255,0.1);
 }
 .footer .footer-top h1{
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    text-align: center;
     font-size: 80px;
     font-weight: 900;
     line-height:1;
-    white-space: no-wrap;
+    white-space: nowrap;
     user-select: none;
+    color: #FFFFFF;
+    padding-inline: 16px;
+    user-select: none;
+    letter-spacing: 0.02em;
+    transform: scaleY(1.1);
 }
+
 .footer .footer-center{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 48px;
+    justify-content: center;
+    gap: 24px;
     align-items: center;
+    margin-bottom: 48px;
+    margin-top: 16px;
+    padding-inline: 16px;
 }
 .footer .footer-center .footer-center-instagram{
     perspective: 500px;
@@ -74,16 +87,14 @@
     transition: 0.3s ease-in-out;
     color: #daea49;
 }
-.footer .footer-separator{
-    height: 1px;
-    width: 60%;
-    background-color: #6B7280;
+.footer  .footer-separator{
+    margin-bottom: 48px;
 }
 .footer .footer-bottom{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     color: rgba(156,163,175,1);
 }
 .footer .footer-bottom h5{
@@ -97,6 +108,7 @@
     font-size: 10px;
     font-weight: 700;
     line-height: 15px;
+    color: rgba(156,163,175,0.8)
 }
 .footer .footer-bottom h6 span{
     text-decoration: underline;
@@ -113,4 +125,26 @@
     width: 30%;
     background-color: #6B7280;
 }  
+}
+
+
+@media (max-width:768px) {
+.footer{
+    padding-top: 64px;
+}
+.footer .footer-top h1{
+    font-size: 60px;
+    margin-bottom: 32px;
+}
+}
+@media (max-width:640px) {
+.footer .footer-top h1{
+    font-size: 11vw;
+}
+.footer .footer-center{
+    gap: 40px;
+}
+.footer .footer-bottom h5{
+    font-size: 11px;
+}
 }

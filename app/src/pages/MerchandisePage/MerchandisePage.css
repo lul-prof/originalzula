@@ -6,6 +6,7 @@
     padding-bottom: 64px;
     padding-inline: 48px;
     margin-top: 24px;
+    overflow: hidden;
 }
 .merchandise .merchandise-links{
     margin-bottom: 24px;
@@ -35,12 +36,14 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.025em;
+    text-wrap: nowrap;
 }
 .merchandise .merchandise-header .merchandise-header-right{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
+    display: none;
 }
 .merchandise .merchandise-header .merchandise-header-right{
     font-family: "Space-mono-regular";
@@ -49,6 +52,12 @@
     line-height: 16px;
     font-weight: 700;
     font-size: 14px;
+}
+.merchandise .merchandise-header button{
+    padding: 8px 12px;
+}
+.merchandise .merchandise-header button:hover{
+    cursor: pointer;
 }
 .merchandise .merchandise-header .merchandise-header-right select{
     border: 0;
@@ -70,7 +79,7 @@
     display: flex;
     flex-direction: column;
     width: 20%;
-    gap: 24px;
+    gap: 40px;
     height:100%;
 }
 .merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-header h2{
@@ -84,11 +93,11 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    font: "Inter-regular", sans-serif;
+    font-size: 16px;
+    color: #9CA3AF;
 }
 .merchandise .merchandise-body .merchandise-body-left .merchandise-body-left-categories ul li{
-    color: #9CA3AF;
-    font-family: "Inter-regular";
-    font-size: 16px;
     letter-spacing: 0.025em;
     line-height: 20px;
 }
@@ -98,7 +107,6 @@
     font-weight: 700;
     text-decoration: underline;
     cursor: pointer;
-    font-size: 18px;
 }
 .merchandise .merchandise-body .merchandise-body-right{
     display: grid;
@@ -123,6 +131,7 @@
     height: 250px;
     overflow: hidden;
     perspective: 500px;
+    aspect-ratio: 1/1;
 }
 .merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image img{
     position: absolute;
@@ -139,7 +148,8 @@
 .merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-details{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 6px;
+    flex: 1 1 0%;
 }
 .merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-details h3{
     font-family: "Inter",sans-serif;
@@ -153,6 +163,8 @@
     font-size: 14px;
     line-height: 1.25rem;
     color: #000000;
+    display: flex;
+    align-items: baseline;
 
 }
 .merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-btn button{
@@ -173,4 +185,146 @@
     color: #000000;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+.filters{
+    padding: 12px 24px;
+    overflow-y: auto;
+}
+.filters .filters-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 24px;
+}
+.filters .filters-top h2{
+    font-family: "Anton";
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 16px;
+}
+.filters .filters-catogories h3{
+    font-family: "Space-mono-bold";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 16px;
+}
+.filters .filters-catogories ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font: "Inter-regular", sans-serif;
+    font-size: 24px;
+    color: #9CA3AF;
+}
+
+.filters .filters-sort h3{
+    font-family: "Space-mono-bold";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.filters .filters-sort ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font: "Inter-regular", sans-serif;
+    font-size: 24px;
+    color: #9CA3AF; 
+}
+.filters::-webkit-scrollbar {
+    width: 4px; 
+    height: 0;
+}
+.filters .filters-btn button{
+    background-color: #000000;
+    width: 100%;
+    font-family: "Space-mono-bold";
+    font-size: 14px;
+    letter-spacing: 0.025em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    margin-top: 16px;
+}
+@media (max-width:1024px) {
+.merchandise .merchandise-body .merchandise-body-right{
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    column-gap: 16px;
+}  
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image{
+    height: 200px;
+}
+}
+
+@media (min-width:768px) {
+.merchandise .merchandise-header .merchandise-header-right{
+    display: flex;
+}
+}
+
+@media (max-width:768px) {
+.merchandise{
+    padding-inline: 32px;
+}
+.merchandise .merchandise-header{
+    margin-bottom: 24px;
+}
+.merchandise .merchandise-header .merchandise-header-left h1{
+    font-size: 60px;
+}
+.merchandise .merchandise-body{
+    flex-direction: column;
+}
+.merchandise .merchandise-body .merchandise-body-left{
+    display: none;
+}
+.merchandise .merchandise-body .merchandise-body-right{
+    width: 100%;
+}
+.merchandise .merchandise-body .merchandise-body-right{
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    column-gap: 16px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image{
+    height: 210px;
+}
+
+}
+
+@media (max-width:640px) {
+.merchandise .merchandise-header .merchandise-header-left h1{
+    font-size: 36px;
+    line-height: 2.5rem;
+}
+.merchandise .merchandise-body .merchandise-body-right{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+}
+@media (max-width:380px) {
+.merchandise{
+    padding-inline: 16px;
+}
+.merchandise .merchandise-header .merchandise-header-left h1{
+    font-size: 30px;
+    line-height: 2.25rem;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-btn button{
+    padding-inline: 8px;
+    padding-block: 6px;
+}
+.merchandise .merchandise-body .merchandise-body-right .merchandise-body-right-apparel .merchandise-body-right-apparel-image{
+    height: 150px;
+}
 }

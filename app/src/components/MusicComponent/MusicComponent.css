@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 48px;
 }
 .music-component .music-component-header .music-component-header-left{
@@ -39,28 +40,20 @@
 .music-component .music-component-mid{
     display: grid;
     grid-template-columns:repeat(2, minmax(0,1fr));
-    gap: 32px;
+    gap: 64px;
     align-items: center;
 }
-.music-component .music-component-mid .music-component-mid-left{
-    position: relative;
-    max-width: 60%;
-    height: 550px;
-}
+
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release{
     position: absolute;
-    top: 80%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
+    padding: 32px;
+    width: 100%;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    display: inline-block;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top .latest{
     background-color: #daea49;
@@ -70,10 +63,11 @@
     font-size: 12px;
     line-height: 16px;
     font-weight: 700;
-    padding-inline: 12px;
+    padding-inline: 6px;
     padding-block: 3px;
     text-transform: uppercase;
     border-radius: 2px;
+    margin-bottom: 8px;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top .title{
     font-family: "Anton";
@@ -82,69 +76,49 @@
     text-transform: uppercase;
     letter-spacing: -0.025em;
     color: #FFFFFF;
+    margin-bottom: 8px;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top .artist{
     font-family: "Inter",sans-serif;
     font-size: 14px;
     line-height: 1.25rem;
+    color: #FFFFFF;
+    margin-bottom: 24px;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-bottom{
     background-color: #FFFFFF;
-    border-radius: 100px;
+    color: #000000;
     text-transform: uppercase;
     font-family: "Inter",sans-serif;
     font-weight: 500;
+    width: fit-content;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-bottom:hover{
     background-color: #daea49;
+    color: #000000;
     transition: 0.3s ease;
     transform: translateZ(10px);
     cursor: pointer;
 }
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-bottom h4{
+    font-size: 14px;
     display: flex;
     flex-direction: row;
     gap: 6px;
-    padding:8px 12px;
+    padding:12px 24px;
     align-items: center;
     letter-spacing: -0.025em;
     line-height: 1;
 }
-.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-img{
-    width: 100%;
-    height: 100%;
-}
-.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 13px;
-    background: rgba(255,255,255,0.6);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(7px);
-    border: 1px solid #E5E7EB;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    object-fit: cover;
-}
+
 .music-component .music-component-mid .music-component-mid-left .music-component-mid-left-img img:hover{
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-img::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.33);
-    pointer-events: none;
-    border-radius: 13px;
-}
+
 .music-component .music-component-mid .music-component-mid-right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 48px;
     height: 100%;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-header{
@@ -154,8 +128,10 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.3em;
+    margin-bottom: 12px;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -164,7 +140,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 18px;
+    gap: 24px;
+    flex: 1 1 0%;
     padding-block: 8px;
     padding-inline: 16px;
     margin-inline:-16px ;
@@ -191,7 +168,7 @@
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track .music-component-mid-right-tracks-track-track-right{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 8px;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track .music-component-mid-right-tracks-track-track-right h3{
     font-family: "Inter-bold",sans-serif;
@@ -203,8 +180,9 @@
 
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track .music-component-mid-right-tracks-track-track-right h5{
-    font-family: "Inter-bold",sans-serif;
+    font-family: "Inter",sans-serif;
     font-size: 12px;
+    font-weight: 500;
     line-height: 16px;
 
 }
@@ -217,7 +195,7 @@
     background-color: #000000;
     color: #FFFFFF;
     padding: 12px;
-
+    margin-top: 20px;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links .music-component-mid-right-links-left{
     font-family: "space-mono-bold";
@@ -228,15 +206,14 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
     white-space: nowrap;
-    padding-left: 8px;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links .music-component-mid-right-links-right{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 24px;
-    padding-right: 8px;
+    gap: 12px;
     perspective: 500px;
+    overflow: hidden;
 }
 .music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links .music-component-mid-right-links-right .music-component-mid-right-links-right-icon{
     width: 40px;
@@ -259,15 +236,68 @@
 }
 
 @media (max-width:768px) {
+.music-component{
+    padding-inline: 24px;
+    padding-block: 40px;
+}
+.music-component .music-component-header .music-component-header-left{
+    gap: 16px;
+}
+.music-component .music-component-header .music-component-header-left h2{
+    font-size:36px; 
+    line-height: 40px;
+}
 .music-component .music-component-mid{
-    display: grid;
-    grid-template-columns:repeat(1, minmax(0,1fr));
-    gap: 64px;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 40px;
     align-items: center;
-    justify-content: center;
 }
 .music-component .music-component-mid .music-component-mid-left{
-    justify-self: center;
-    max-width: 100%;
+    margin-inline:auto;   
+}
+.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release{
+    padding: 24px;
+}
+.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top .latest{
+    font-size: 10px;
+    text-align: center;
+
+}
+.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-top .title{
+    font-size: 48px;
+}
+.music-component .music-component-mid .music-component-mid-left .music-component-mid-left-release .music-component-mid-left-release-bottom h4{
+    font-size: 12px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-header{
+    font-size: 10px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track{
+    gap: 16px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track .music-component-mid-right-tracks-track-track-right h3{
+    font-size: 14px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-tracks .music-component-mid-right-tracks-track .music-component-mid-right-tracks-track-track-right h5{
+    font-size: 10px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links{
+    padding: 8px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links .music-component-mid-right-links-left{
+    font-size: 10px;
+}
+.music-component .music-component-mid .music-component-mid-right .music-component-mid-right-links .music-component-mid-right-links-right{
+    gap: 8px;
+}
+}
+
+@media (max-width:640px) {
+.music-component .music-component-header .music-component-header-left h2{
+    font-size:30px; 
+    line-height: 36px;
+}
+.music-component .music-component-header .music-component-header-right{
+    display: none;
 }
 }
